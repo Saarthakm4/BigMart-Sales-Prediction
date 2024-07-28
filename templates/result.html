@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        nav {
+            background: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        nav a:hover {
+            color: #ff7e5f;
+        }
+        section {
+            background: rgba(255, 255, 255, 0.9);
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #ff7e5f;
+        }
+        p {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .graphs {
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/predict">Predict</a></li>
+            <li><a href="/data">Data</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Prediction Result</h2>
+        <p>Predicted Value: {{ prediction }}</p>
+        <div class="graphs">
+            <h3>Input Features and Their Values</h3>
+            <div id="input-graph">{{ graph_input_html | safe }}</div>
+            <h3>Predicted Value</h3>
+            <div id="pred-graph">{{ graph_pred_html | safe }}</div>
+        </div>
+        <a href="/" class="btn btn-primary mt-3">Go back</a>
+    </section>
+</body>
+</html>

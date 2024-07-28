@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>Big Mart Sales Prediction</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Style.css') }}">
+
+    <style>
+        body {
+            background: linear-gradient(to left, #667292 0%, #a2b9bc 100%);
+            color: #fff;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container {
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .btn-primary {
+            background-color: #00a8ff;
+        }
+        .btn-primary:hover {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to the Big Mart Sales Prediction</h1>
+
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>This project aims to predict sales for Big Mart products based on various factors. By analyzing historical data and input features, we strive to provide accurate sales forecasts to help improve inventory management and decision-making.</p>
+
+        <h2>How It Works</h2>
+        <p>Users can input specific item details, and our model will generate a prediction for the sales quantity of the product. This can help businesses better plan their inventory and sales strategies.</p>
+
+        <h2>Get Started</h2>
+        <p>To make a prediction, please navigate to the prediction page:</p>
+        <div class="text-center">
+            <a href="/predict" class="btn btn-primary">Go to Prediction Page</a>
+        </div>
+    </div>
+
+    <footer class="text-center" style="margin-top: 50px;">
+        <p>&copy; 2023 Big Mart Sales Prediction Project</p>
+        <div class="centerdiv">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
